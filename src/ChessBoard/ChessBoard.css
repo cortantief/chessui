@@ -1,0 +1,42 @@
+.chess-board {
+  background: red;
+  min-width: 700px;
+  min-height: 700px;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  user-select: none;
+}
+
+.chess-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.chess-cell.odd {
+  background: gray;
+}
+.chess-cell.even {
+  background: white;
+}
+
+.chess-cell.clickable,
+.chess-cell.proposition {
+  cursor: pointer;
+}
+.chess-cell.proposition {
+  background: orange;
+}
+
+.suggested-cell {
+  background: rgb(204, 89, 89);
+
+  border: solid thin;
+  cursor: pointer;
+}
